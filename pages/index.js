@@ -4,9 +4,8 @@ function Home() {
   return (
     <div>
       <h1>Home Pre Render All Product</h1>
-
-      <Link href="/user">Users</Link>
-
+      <Link href="/user">Users</Link> <br></br>
+      <Link href="/posts">Posts</Link>
       {/* {data.result.map((product) => {
         return (
           <div key={product._id}>

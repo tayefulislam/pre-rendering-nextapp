@@ -1,4 +1,4 @@
-function Users({ users, data }) {
+function Users({ data }) {
   return (
     <div>
       <h1>Home Pre Render All Product</h1>
@@ -18,7 +18,9 @@ function Users({ users, data }) {
 export default Users;
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:5000/api/v1/products");
+  const res = await fetch(
+    "https://chibapcmartdemo.onrender.com/api/v1/products"
+  );
   const data = await res.json();
 
   const userRes = await fetch("https://jsonplaceholder.typicode.com/users");

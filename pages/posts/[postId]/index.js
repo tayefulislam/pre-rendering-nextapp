@@ -20,12 +20,13 @@ export async function getStaticPaths() {
   });
 
   return {
-    // paths: [
-    //   { params: { postId: "1" } },
-    //   { params: { postId: "2" } },
-    //   { params: { postId: "3" } },
-    // ],
-    paths,
+    paths: [
+      { params: { postId: "1" } },
+      { params: { postId: "2" } },
+      { params: { postId: "3" } },
+      { params: { postId: "4" } },
+    ],
+
     fallback: false,
   };
 }

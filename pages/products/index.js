@@ -2,15 +2,13 @@ function ProductList({ products }) {
   console.log(products);
   return (
     <div>
-      <h1>Product List Page</h1>
-
+      <h1>Product List</h1>
       {products.map((product) => {
         return (
           <div key={product._id}>
-            <h3>
-              Product Id: {product.productId} \\ Type : {product.productType}
-            </h3>
-            <h4>Title : {product.title}</h4>
+            <h1>{product.title}</h1>
+            <h3>{product.productType}</h3>
+            <h4>{product.discountPrice}</h4>
           </div>
         );
       })}
@@ -25,6 +23,8 @@ export async function getServerSideProps() {
     "https://chibapcmartdemo.onrender.com/api/v1/products"
   );
   const products = await productsRes.json();
+
+  // console.log(products);
 
   return {
     props: {
